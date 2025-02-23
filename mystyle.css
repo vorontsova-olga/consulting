@@ -268,18 +268,20 @@ footer {
 }
 
 @media (max-width: 480px) {
-    .resume {
-        position: relative;
-        overflow: hidden; /* предотвращает вылезание элементов за пределы секции */
-    }
-    .resume-photo {
-        position: absolute;
-        top: 50%;
-        right: 10px;
-        transform: translateY(-50%);
-        max-width: 80%; /* ограничиваем ширину фото */
-    }
-    .resume-text {
-        margin-right: 90px; /* отступ, чтобы текст не накладывался на фото */
-    }
+  .resume {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+  .resume-text {
+    grid-column: 1 / 2;
+  }
+  .resume-photo {
+    grid-column: 2 / 3;
+    width: 100px; /* задаем подходящую ширину */
+  }
+  .resume-photo img {
+    width: 100%;
+    height: auto;
+  }
 }

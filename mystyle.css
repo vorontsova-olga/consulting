@@ -220,17 +220,6 @@ max-width: 100%;
 height: auto;
 }
 
-@media (min-width: 768px) {
-    .resume-photo {
-        min-width: 130px; /* Меняется минимальная ширина на более широких экранах */
-    }
-}
-
-@media (min-width: 1024px) {
-    .resume-photo {
-        min-width: 170px; /* Для экранов еще шире минимальная ширина увеличивается до 170px */
-    }
-}
 
 .photo-description {
 margin-top: 10px;

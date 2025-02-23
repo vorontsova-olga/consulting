@@ -190,7 +190,7 @@ background-color: #e65c00;
 
 .resume {
 display: flex;
-flex-wrap: nowrap;
+flex-wrap: wrap;
 align-items: center;
 justify-content: space-between;
 background-color: #fff;
@@ -208,7 +208,9 @@ margin-right: 20px;
 
 
 .resume-photo {
-flex: 0 0 170px;
+flex: 0 0 auto;
+min-width: 100px; /* Минимальная ширина 100px */
+max-width: 170px; /* Максимальная ширина 170px */
 text-align: center;
 }
 
@@ -216,6 +218,18 @@ text-align: center;
 .resume-photo img {
 max-width: 100%;
 height: auto;
+}
+
+@media (min-width: 768px) {
+    .resume-photo {
+        min-width: 130px; /* Меняется минимальная ширина на более широких экранах */
+    }
+}
+
+@media (min-width: 1024px) {
+    .resume-photo {
+        min-width: 170px; /* Для экранов еще шире минимальная ширина увеличивается до 170px */
+    }
 }
 
 .photo-description {

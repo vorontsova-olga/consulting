@@ -265,3 +265,17 @@ footer {
     transform: translateY(-5px);
 }
 
+@media (max-width: 480px) {
+  .resume {
+    position: relative; /* делаем контейнер позиционируемым */
+  }
+  .resume-photo {
+    position: absolute; /* позиционируем фото абсолютно */
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
+  .resume-text {
+    margin-right: 190px; /* отступ справа для избежания наложения текста на фото */
+  }
+}

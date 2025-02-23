@@ -209,7 +209,7 @@ margin-right: 20px;
 
 .resume-photo {
 flex: 0 0 auto;
-min-width: 100px; /* Минимальная ширина 100px */
+min-width: 50px; /* Минимальная ширина 100px */
 max-width: 170px; /* Максимальная ширина 170px */
 text-align: center;
 }

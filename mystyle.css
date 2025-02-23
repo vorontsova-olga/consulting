@@ -209,6 +209,7 @@ footer {
 
 .resume-photo {
     flex: 0 0 170px;
+    min-width: 130px;
     text-align: center;
 }
 

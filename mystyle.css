@@ -187,46 +187,54 @@ font-size: 16px;
 background-color: #e65c00;
 }
 
-
 .resume {
-display: flex;
-flex-wrap: wrap;
-align-items: center;
-justify-content: space-between;
-background-color: #fff;
-padding: 20px;
-margin: 20px 0;
-border-radius: 5px;
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row; /* Explicitly set horizontal layout */
+    flex-wrap: nowrap; /* Prevent wrapping to new line */
+    align-items: flex-start; /* Align items at the top */
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    gap: 20px; /* Add space between text and image */
 }
-
 
 .resume-text {
-flex: 1;
-margin-right: 20px;
+    flex: 1; /* Take available space */
+    min-width: 0; /* Allow text to shrink if needed */
 }
-
 
 .resume-photo {
-flex: 0 0 auto;
-min-width: 50px; /* Минимальная ширина 100px */
-max-width: 170px; /* Максимальная ширина 170px */
-text-align: center;
+    flex: 0 0 auto; /* Don't grow or shrink */
+    width: 170px; /* Fixed width instead of max-width */
+    text-align: center;
 }
-
 
 .resume-photo img {
-max-width: 100%;
-height: auto;
+    width: 100%;
+    height: auto;
+    display: block; /* Remove extra space below image */
 }
 
-
 .photo-description {
-margin-top: 10px;
-font-size: 12px;
-max-width: 100%;
-margin-left: auto;
-margin-right: auto;
+    margin-top: 10px;
+    font-size: 12px;
+    width: 100%;
+}
+
+/* Add a media query for very small screens */
+@media (max-width: 480px) {
+    .resume {
+        /* Keep horizontal layout even on very small screens */
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .resume-photo {
+        width: 120px; /* Slightly smaller on very small screens */
+    }
 }
 .contact-container {
 display: flex;

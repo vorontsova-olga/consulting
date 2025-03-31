@@ -1,275 +1,322 @@
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Roboto', sans-serif;
+ }
+
 body {
-font-family: 'Open Sans', sans-serif;
-line-height: 1.6;
-color: #333;
-background-color: #93c5d8;
+    line-height: 1.6;
+    color: #333;
+    background-color: #e6f4f9;
 }
+
 header {
-background-color: #003366;
-color: #fff;
-padding: 20px;
-text-align: center;
+    background-color: #003366;
+    color: #fff;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 2px 15px rgba(0, 51, 102, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
+
 header h1 {
-font-size: 2em;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
 }
+
 nav {
-margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
+
 nav a {
-color: #fff;
-margin: 0 10px;
-text-decoration: none;
-font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ff6600;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 .hero {
-background: url('oversizepermit.jpg') center center/cover no-repeat;
-color: #fff;
-padding: 100px 20px;
-text-align: center;
-position: relative;
+    background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)),
+    url('oversizepermit.jpg') center/cover;
+    color: #fff;
+    padding: 6rem 2rem;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    margin-bottom: -5rem;
 }
 
-.hero::before {
-content: '';
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-color: rgba(0, 0, 0, 0.5);
-}
-.hero-content {
-position: relative;
-z-index: 1;
-}
 .hero-content h2 {
-font-size: 2.5em;
-margin-bottom: 10px;
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
+
 .hero-content p {
-font-size: 1.2em;
+    font-size: 1.4rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
 }
+
 .cta-btn {
-display: inline-block;
-background-color: #ff6600;
-color: #fff;
-padding: 10px 20px;
-margin-top: 20px;
-text-decoration: none;
-font-size: 1.2em;
-border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background-color: #ff6600;
+    color: #fff;
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);
 }
+
+.cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 102, 0, 0.4);
+    background-color: #ff7733;
+}
+
 .container {
-max-width: 1200px;
-margin: 0 auto;
-padding: 20px;
-}
-
-.offer {
-background-color: #fff;
-padding: 30px;
-margin-top: 40px;
-border-radius: 5px;
-box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-.offer ul {
-margin: 20px 0;
-padding-left: 20px;
-}
-.offer li {
-margin-bottom: 10px;
-}
-
-.contact {
-background-color: #fff;
-padding: 30px;
-margin-top: 40px;
-border-radius: 5px;
-box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-.contact h2 {
-margin-bottom: 20px;
-color: #003366;
-}
-.contact h3 {
-margin-bottom: 20px;
-color: #003366;
-}
-.contact form div {
-margin-bottom: 15px;
-}
-.contact label {
-font-weight: bold;
-}
-.contact input, .contact textarea {
-width: 100%;
-padding: 10px;
-border: 1px solid #ccc;
-border-radius: 3px;
-}
-.contact button {
-padding: 10px 20px;
-background-color: #003366;
-color: #fff;
-border: none;
-border-radius: 3px;
-cursor: pointer;
-}
-footer {
-background-color: #003366;
-color: #fff;
-text-align: center;
-padding: 20px;
-margin-top: 40px;
-}
-
-@media(max-width: 768px) {
-.hero {
-padding: 80px 20px;
-}
-.hero-content h2 {
-font-size: 2em;
-}
-}
-
-#consultationPhone {
-padding: 5px;
-margin: 10px 5px;
-width: 180px;
-vertical-align: middle;
-}
-
-#consultationCallLink {
-background-color: #ff6600;
-color: #fff;
-padding: 5px 10px;
-border-radius: 3px;
-text-decoration: none;
-vertical-align: middle;
-display: inline-block;
-}
-
-#consultationCallLink:hover {
-background-color: #e65c00;
-}
-
-
-#consultationPhone {
-padding: 5px;
-margin: 10px 5px;
-width: 180px;
-vertical-align: middle;
-border: 1px solid #ccc;
-border-radius: 5px;
-font-size: 16px;
-}
-
-
-#consultationCallLink {
-background-color: #ff6600;
-color: #fff;
-padding: 5px 10px;
-border-radius: 3px;
-text-decoration: none;
-vertical-align: middle;
-display: inline-block;
-font-size: 16px;
-}
-
-#consultationCallLink:hover {
-background-color: #e65c00;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
 .resume {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2.5rem;
+    margin: 3rem 0;
+    box-shadow: 0 10px 30px rgba(0, 51, 102, 0.1);
     display: flex;
-    flex-direction: row; 
-    flex-wrap: nowrap; 
+    flex-direction: row;
+    gap: 3rem;
     align-items: flex-start;
-    justify-content: space-between;
-    background-color: #fff;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    gap: 20px; 
 }
 
 .resume-text {
-    flex: 1; 
-    min-width: 0; 
+    flex: 1;
+    min-width: 0;
+}
+
+.resume-text h2 {
+    color: #003366;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.resume-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
 }
 
 .resume-photo {
-    flex: 0 0 auto; 
-    width: 170px; 
-    text-align: center;
+    flex: 0 0 200px;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .resume-photo img {
     width: 100%;
     height: auto;
-    display: block; 
+    display: block;
 }
 
-.photo-description {
-    margin-top: 10px;
-    font-size: 12px;
-    width: 100%;
+ .photo-description {
+     font-size: 0.95rem;
+     color: #000;
+     margin-top: 1rem;
+     text-align: center;
+     line-height: 1.4;
+     font-weight: 500;
+ }
+
+.offer {
+    background: #fff;
+    border-radius: 12px;
+    padding: 3rem;
+    margin: 3rem 0;
+    box-shadow: 0 10px 30px rgba(0, 51, 102, 0.1);
 }
 
-
-@media (max-width: 480px) {
-    .resume {
-        flex-direction: row;
-        align-items: center;
-    }
-    
-    .resume-photo {
-        width: 120px; 
-    }
+.offer h2 {
+    color: #003366;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
 }
+
+.offer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.offer li {
+    position: relative;
+    padding-left: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.offer li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #ff6600;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.offer p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.contact {
+    background: #003366;
+    border-radius: 12px;
+    padding: 3rem;
+    margin: 3rem 0;
+    color: #fff;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.contact-name {
+    font-size: 2.2rem;
+    color: #fff;
+}
+
 .contact-container {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-background-color: #f9f9f9;
-padding: 20px;
-border-radius: 8px;
-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-gap: 20px; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    justify-content: center;
 }
 
 .contact-item {
-display: flex;
-align-items: center;
-font-size: 1.2em;
-color: #333;
-transition: transform 0.3s ease;
-}
-
-.contact-item i {
-margin-right: 8px;
-font-size: 1.5em;
-color: #ff6600;
-}
-
-.contact-item a {
-text-decoration: none;
-color: inherit;
-transition: color 0.3s ease;
-}
-
-.contact-item a:hover {
-color: #ff6600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
 .contact-item:hover {
-transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+}
+
+.contact-item i {
+    font-size: 2rem;
+    color: #ff6600;
+}
+
+.contact-item a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+footer {
+    background: #002244;
+    color: #fff;
+    padding: 3rem 2rem;
+    margin-top: 5rem;
+    text-align: center;
+    line-height: 1.6;
+}
+
+footer p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 4rem 1.5rem;
+        clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+    }
+
+    .resume {
+        gap: 2rem;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .cta-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .resume {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resume-photo {
+        flex: none;
+        width: 100%;
+        max-width: 250px;
+    }
 }

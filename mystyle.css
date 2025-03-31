@@ -66,8 +66,6 @@ nav a:hover::after {
     color: #fff;
     padding: 6rem 2rem;
     text-align: center;
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-    margin-bottom: -5rem;
 }
 
 .hero-content h2 {
@@ -306,8 +304,6 @@ footer p {
 
     .hero {
         padding: 4rem 1.5rem;
-        clip-path: none;
-        margin-bottom: 0;
     }
 
     .container {

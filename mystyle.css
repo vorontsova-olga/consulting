@@ -1,9 +1,11 @@
- * {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
-     font-family: 'Roboto', sans-serif;
- }
+/* Обновленный mystyle.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+}
 
 body {
     line-height: 1.6;
@@ -24,7 +26,7 @@ header {
 header h1 {
     font-size: 2.2rem;
     font-weight: 700;
-    text-align: center;
+    letter-spacing: -0.5px;
     margin-bottom: 1rem;
 }
 
@@ -32,12 +34,12 @@ nav {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    flex-wrap: wrap;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
+    font-size: 1.1rem;
     padding: 0.5rem 1rem;
     border-radius: 4px;
     transition: all 0.3s ease;
@@ -113,15 +115,10 @@ nav a:hover::after {
     padding: 2.5rem;
     margin: 3rem 0;
     box-shadow: 0 10px 30px rgba(0, 51, 102, 0.1);
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 200px;
     gap: 3rem;
-    align-items: flex-start;
-}
-
-.resume-text {
-    flex: 1;
-    min-width: 0;
+    align-items: start;
 }
 
 .resume-text h2 {
@@ -137,7 +134,6 @@ nav a:hover::after {
 }
 
 .resume-photo {
-    flex: 0 0 200px;
     position: relative;
     border-radius: 12px;
     overflow: hidden;
@@ -150,14 +146,13 @@ nav a:hover::after {
     display: block;
 }
 
- .photo-description {
-     font-size: 0.95rem;
-     color: #000;
-     margin-top: 1rem;
-     text-align: center;
-     line-height: 1.4;
-     font-weight: 500;
- }
+.photo-description {
+    font-size: 0.95rem;
+    color: #666;
+    margin-top: 1rem;
+    text-align: center;
+    line-height: 1.4;
+}
 
 .offer {
     background: #fff;
@@ -281,6 +276,7 @@ footer p {
     }
 
     .resume {
+        grid-template-columns: 1fr;
         gap: 2rem;
     }
 
@@ -307,16 +303,5 @@ footer p {
     .cta-btn {
         width: 100%;
         justify-content: center;
-    }
-
-    .resume {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .resume-photo {
-        flex: none;
-        width: 100%;
-        max-width: 250px;
     }
 }
